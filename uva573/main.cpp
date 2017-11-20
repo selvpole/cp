@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
     __FastIO;
-//    FileIn(input);
+    FileIn(input);
 
     int day;
     float initialHeight, DistanceClimbed, HeightAfterClimbing, HeightAfterSliding;
@@ -31,6 +31,6 @@ int main() {
         printf("failure on day %d\n", day);
       }
     }
-//    fclose(stdin);
+    fclose(stdin);
     return 0;
 }
