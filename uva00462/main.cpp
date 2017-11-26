@@ -108,93 +108,85 @@ int main() {
             }
         }
 
-        // apply to rule 2
-        if((S.K && ((S.num-1) == 0))
-           || (H.K && ((H.num-1) == 0) )
-           || (D.K && ((D.num-1) == 0) )
-           || (C.K && ((C.num-1) == 0) )) {
-            total--;
-        }
+      // 使用條件2
+      if(S.K && S.num-1 == 0) total--;
+      if(H.K && H.num-1 == 0) total--;
+      if(D.K && D.num-1 == 0) total--;
+      if(C.K && C.num-1 == 0) total--;
 
-        // apply to rule 3
-        if((S.Q && ((S.num-1) <= 1) && (S.num-1)>=0)
-           || (H.Q && ((H.num-1) <= 1) && (H.num-1)>=0 )
-           || (D.Q && ((D.num-1) <= 1) && (D.num-1)>=0)
-           || (C.Q && ((C.num-1) <= 1) && (C.num-1>=0))) {
-            total--;
-        }
+      // 使用條件3
+      if(S.Q && (S.num-1) <= 1 && (S.num-1)>=0) total--;
+      if(H.Q && (H.num-1) <= 1 && (H.num-1)>=0) total--;
+      if(D.Q && (D.num-1) <= 1 && (D.num-1)>=0) total--;
+      if(C.Q && (C.num-1) <= 1 && (C.num-1)>=0) total--;
 
-        // apply to rule 4
-        if((S.J && ((S.num-1) <= 2) && (S.num-1)>=0)
-           || (H.J && ((H.num-1) <= 2) && (H.num-1)>=0)
-           || (D.J && ((D.num-1) <= 2) && (D.num-1)>=0)
-           || (C.J && ((C.num-1) <= 2) && (C.num-1)>=0 )) {
-            total--;
-        }
+      // 使用條件4
+      if(S.J && (S.num-1) <= 2 && (S.num-1)>=0) total--;
+      if(H.J && (H.num-1) <= 2 && (H.num-1)>=0) total--;
+      if(D.J && (D.num-1) <= 2 && (D.num-1)>=0) total--;
+      if(C.J && (C.num-1) <= 2 && (C.num-1)>=0) total--;
 
-        // check if suit is stopped or not
-        if(S.A || (S.K && (S.num-1)>=1) || (S.Q && (S.num-1)>=2)) {
-            S.stopped = true;
-        }
+      // 確定每個花色是否有Stopped
+      if(S.A || (S.K && (S.num-1)>=1) || (S.Q && (S.num-1)>=2)) {
+        S.stopped = true;
+      }
 
-        if(H.A || (H.K && (H.num-1)>=1) || (H.Q && (H.num-1)>=2)) {
-            H.stopped = true;
-        }
+      if(H.A || (H.K && (H.num-1)>=1) || (H.Q && (H.num-1)>=2)) {
+        H.stopped = true;
+      }
 
-        if(D.A || (D.K && (D.num-1)>=1) || (D.Q && (D.num-1)>=2)) {
-            D.stopped = true;
-        }
+      if(D.A || (D.K && (D.num-1)>=1) || (D.Q && (D.num-1)>=2)) {
+        D.stopped = true;
+      }
 
-        if(C.A || (C.K && (C.num-1)>=1) || (C.Q && (C.num-1)>=2)) {
-            C.stopped = true;
-        }
+      if(C.A || (C.K && (C.num-1)>=1) || (C.Q && (C.num-1)>=2)) {
+        C.stopped = true;
+      }
 
-        if(total >= 16 && S.stopped && H.stopped && D.stopped && C.stopped ) {
-            printf("BID NO-TRUMP\n");
+      if(total >= 16 && S.stopped && H.stopped && D.stopped && C.stopped ) {
+        printf("BID NO-TRUMP\n");
+      } else {
+
+        if(S.num == 2) ++total;
+        if(H.num == 2) ++total;
+        if(D.num == 2) ++total;
+        if(C.num == 2) ++total;
+
+        if(S.num == 0 || S.num == 1) total+=2;
+        if(H.num == 0 || H.num == 1) total+=2;
+        if(D.num == 0 || D.num == 1) total+=2;
+        if(C.num == 0 || C.num == 1) total+=2;
+
+        if(total<14) {
+          printf("PASS\n");
         } else {
 
-            // apply to rule 5
-                if(S.num == 2 || H.num ==2 || D.num ==2 || C.num ==2) {
-                    total++;
-                }
-            // apply to rule 6
-                if(S.num == 1 || H.num ==1 || D.num ==1 || C.num ==1) {
-                    total = total +2;
-                }
-            // apply to rule 7
-                if(S.num == 0 || H.num ==0 || D.num ==0 || C.num ==0) {
-                    total = total +2;
-                }
+          // 找出最大值
+          vector<int> n;
+          int max = S.num;
+          n.push_back(S.num);
+          n.push_back(H.num);
+          n.push_back(D.num);
+          n.push_back(C.num);
 
-            if(total<14) {
-                printf("PASS\n");
-            } else {
-
-                vector<int> n;
-                int max = S.num;
-                n.push_back(S.num);
-                n.push_back(H.num);
-                n.push_back(D.num);
-                n.push_back(C.num);
-
-                for(int i=0; i<4; i++) {
-                    if(n[i]> max) {
-                        max = n[i];
-                    }
-                }
-
-                if(max == S.num) {
-                    printf("BID S\n");
-                } else if (max == H.num) {
-                    printf("BID H\n");
-                } else if (max == D.num) {
-                    printf("BID D\n");
-                } else if (max == C.num) {
-                    printf("BID C\n");
-                }
+          for(int i=0; i<4; i++) {
+            if(n[i]> max) {
+              max = n[i];
             }
+          }
+
+          if(max == S.num) {
+            printf("BID S\n");
+          } else if (max == H.num) {
+            printf("BID H\n");
+          } else if (max == D.num) {
+            printf("BID D\n");
+          } else if (max == C.num) {
+            printf("BID C\n");
+          }
         }
-        fflush(stdin);
+      }
+
     }
     /*********************END**************************/
     fclose(stdin);
