@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/rae/Project/cp/uva637/main.cpp
+iostream
+-
+cstdio
+-
+vector
+-
+string
+-
+algorithm
+-
+map
+-
+cctype
+-
+cmath
+-
+
