@@ -1,0 +1,53 @@
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -D CMAKE_CXX_COMPILER=/usr/local/bin/g++-7 -G "CodeBlocks - Unix Makefiles" /Users/rae/Project/cp/cfTheatreSqaure
+-- Configuring done
+You have changed variables that require your cache to be deleted.
+Configure will be re-run and you may have to reset some variables.
+The following variables have changed:
+CMAKE_CXX_COMPILER= /usr/local/bin/g++-7
+
+-- The C compiler identification is AppleClang 9.0.0.9000038
+-- The CXX compiler identification is GNU 7.2.0
+-- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc
+-- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Checking whether CXX compiler has -isysroot
+-- Checking whether CXX compiler has -isysroot - yes
+-- Checking whether CXX compiler supports OSX deployment target flag
+-- Checking whether CXX compiler supports OSX deployment target flag - yes
+-- Check for working CXX compiler: /usr/local/bin/g++-7
+-- Check for working CXX compiler: /usr/local/bin/g++-7 -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/rae/Project/cp/cfTheatreSqaure/cmake-build-debug
+
+CMakeCache was cleared by CMake. Generation will be re-initiated to apply CMake command line parameters.
+
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -D CMAKE_CXX_COMPILER=/usr/local/bin/g++-7 -G "CodeBlocks - Unix Makefiles" /Users/rae/Project/cp/cfTheatreSqaure
+-- The C compiler identification is AppleClang 9.0.0.9000038
+-- The CXX compiler identification is GNU 7.2.0
+-- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc
+-- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Checking whether CXX compiler has -isysroot
+-- Checking whether CXX compiler has -isysroot - yes
+-- Checking whether CXX compiler supports OSX deployment target flag
+-- Checking whether CXX compiler supports OSX deployment target flag - yes
+-- Check for working CXX compiler: /usr/local/bin/g++-7
+-- Check for working CXX compiler: /usr/local/bin/g++-7 -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/rae/Project/cp/cfTheatreSqaure/cmake-build-debug
