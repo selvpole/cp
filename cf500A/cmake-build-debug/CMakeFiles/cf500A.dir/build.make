@@ -60,15 +60,15 @@ include CMakeFiles/cf500A.dir/flags.make
 CMakeFiles/cf500A.dir/main.cpp.o: CMakeFiles/cf500A.dir/flags.make
 CMakeFiles/cf500A.dir/main.cpp.o: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rae/Project/cp/cf500A/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cf500A.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cf500A.dir/main.cpp.o -c /Users/rae/Project/cp/cf500A/main.cpp
+	/usr/local/bin/g++-7   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cf500A.dir/main.cpp.o -c /Users/rae/Project/cp/cf500A/main.cpp
 
 CMakeFiles/cf500A.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cf500A.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/rae/Project/cp/cf500A/main.cpp > CMakeFiles/cf500A.dir/main.cpp.i
+	/usr/local/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/rae/Project/cp/cf500A/main.cpp > CMakeFiles/cf500A.dir/main.cpp.i
 
 CMakeFiles/cf500A.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cf500A.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/rae/Project/cp/cf500A/main.cpp -o CMakeFiles/cf500A.dir/main.cpp.s
+	/usr/local/bin/g++-7  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/rae/Project/cp/cf500A/main.cpp -o CMakeFiles/cf500A.dir/main.cpp.s
 
 CMakeFiles/cf500A.dir/main.cpp.o.requires:
 

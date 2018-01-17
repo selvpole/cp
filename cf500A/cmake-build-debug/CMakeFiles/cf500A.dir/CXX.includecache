@@ -7,6 +7,6 @@
 #IncludeRegexTransform: 
 
 /Users/rae/Project/cp/cf500A/main.cpp
-iostream
+bits/stdc++.h
 -
 
